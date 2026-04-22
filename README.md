@@ -1,4 +1,4 @@
-# Elite Endorsements (ongoing)
+# Elite Endorsements
 
 This repository contains **in-progress research via formal theoretical model** about **how political elites choose endorsements in primary elections**, and what those choices imply for **coordination, factional conflict, and candidate selection**.
 
