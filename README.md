@@ -1,6 +1,6 @@
 # Elite Endorsements (ongoing)
 
-This repository contains an **in-progress research paper and formal theoretical model** about **how political elites choose endorsements in primary elections**, and what those choices imply for **coordination, factional conflict, and candidate selection**.
+This repository contains **in-progress research via formal theoretical model** about **how political elites choose endorsements in primary elections**, and what those choices imply for **coordination, factional conflict, and candidate selection**.
 
 At a high level, the project treats endorsements as *strategic actions* taken under uncertainty: elites may prefer different candidates for ideological or factional reasons, but they also care about being aligned with a winner (and about the rewards that come from backing the eventual nominee). The central goal is to build a model that makes these tradeoffs explicit and helps clarify when elites will:
 - **coordinate** on a single “establishment” option,
