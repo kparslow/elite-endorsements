@@ -1,0 +1,43 @@
+% Shared preamble for the paper
+
+% Encoding / fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% Layout
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+
+% Math
+\usepackage{amsmath, amssymb, amsthm}
+
+% Figures / tables
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Links
+\usepackage[hidelinks]{hyperref}
+
+% Bibliography / citations
+% NOTE: Sections use \parencite, so we load biblatex with biber.
+\usepackage[backend=biber,style=authoryear,natbib=true]{biblatex}
+\addbibresource{bib/citations.bib}
+
+% Convenience
+\usepackage{xcolor}
+\usepackage{csquotes}
+
+% Theorem-like environments (optional)
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+
+% Common macros
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
