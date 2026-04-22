@@ -1,1 +1,160 @@
+\section{Analysis}
+To shed light on how the structure of political rewards shapes elite behavior, I present the results sequentially, emphasizing comparisons between the fixed and split reward settings. First, I analyze how ideological alignment shapes the individual endorsement decision, focusing on the interplay between ideological preferences and political incentives. Then I define the equilibrium conditions under which elites coordinate their support behind the same candidate versus when they strategically diverge. Lastly, I characterize how the reward structure influences strategic interactions—particularly, whether endorsements reinforce one another or become competitive.
 
+\subsection*{Individual Endorsement Decisions Under Different Reward Mechanisms}
+Before deriving equilibrium conditions, define the probability that the establishment candidate wins the nomination for a given number of endorsements $n$ as follows: 
+\[Pr(f(n) + V > 0) = 1 - Pr(V \leq -f(n))= 1- F_V\bigg(-f(n)\bigg) = 1- F_V\bigg(-\frac{\alpha n}{1+\beta n}\bigg)\]
+
+Since $F_V(\cdot)$ is strictly increasing, this probability grows as the number of endorsements $n$ grows, implying that each additional endorsement raises the establishment candidate’s likelihood of nomination. However, due to the functional form $f(n) = \frac{\alpha n}{1+ \beta n}$, the marginal impact of endorsements diminishes. Early endorsements provide substantial momentum by signaling viability and shaping voter perceptions, while later endorsements offer diminishing informational returns.
+
+In equilibrium, each elite’s decision depends on whether their ideological alignment with the establishment candidate outweighs the potential strategic advantage of backing the eventual winner. Thus, equilibrium endorsement thresholds capture the conditions under which ideological considerations dominate political incentives or vice versa. To clarify these strategic incentives, I begin by examining how elite 1’s decision to endorse depends on elite 2’s endorsement under both reward structures.
+
+First, consider the fixed rewards setting. Here, each elite obtains the same political benefit from endorsing the winning candidate, regardless of how many elites join them. Suppose elite 2 endorses the establishment candidate. Then, elite 1's optimal strategy is also to endorse the establishment candidate if and only if:
+\[
+    x_1 + \bigg[1- F_V\bigg(-\frac{2\alpha}{1+2\beta}\bigg)\bigg]\cdot \Phi\bigg(\frac{v_E}{\sigma_{\epsilon}}\bigg) \geq F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\cdot \Phi\bigg(\frac{v_O}{\sigma_{\epsilon}}\bigg)
+\]
+Simplifying, this yields the equilibrium threshold condition for elite 1’s endorsement of $E$ when $e_2 = E$:
+\[
+    x_1 \geq F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\cdot p_O - \bigg[1- F_V\bigg(-\frac{2\alpha}{1+2\beta}\bigg)\bigg]\cdot p_E \equiv x_E
+\]
+
+For simplicity, assume that elites endorse the establishment candidate when indifferent. Intuitively, endorsing candidate $E$ is optimal for elite 1 if the ideological preference for $E$ sufficiently offsets any electoral advantage the outsider might provide. Thus, the threshold $x_E$ captures how ideological alignment interacts with electoral viability when political rewards do not diminish with additional endorsements.
+
+Next, consider the split rewards setting. Now, political benefits are divided equally among all endorsers of the winning candidate. Thus, endorsing alongside another elite reduces each endorser’s payoff, discouraging coordination. If elite 2 endorses the establishment candidate, elite 1’s endorsement threshold becomes:
+
+\[x_1 \geq F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\cdot p_O - \frac{1}{2}\bigg[1- F_V\bigg(-\frac{2\alpha}{1+2\beta}\bigg)\bigg]\cdot p_E \equiv x'_E \]
+
+Comparing this threshold $x'_E$ with the fixed rewards threshold $x_E$, note that $x'_E \geq x_E$. This implies that under split rewards, a higher ideological preference is required to induce elite 1 to endorse the establishment candidate once elite 2 has already endorsed them. Sharing political rewards dilutes each elite’s influence, increasing the incentives to strategically differentiate endorsements. Rather than signaling unity, endorsements become competitive signals, as elites strive to maximize individual political influence by endorsing distinct candidates.
+
+\subsection*{Coordination and Fragmentation of Endorsements}
+To characterize how reward structures shape endorsement dynamics, I derive equilibrium conditions under which elites simultaneously choose endorsements. Analysis focuses exclusively on pure-strategy equilibria, where each elite endorses a candidate to maximize their expected utility given the other elite’s choice and their ideological alignment $x_i$. Mixed strategies are not considered explicitly given that elites default to endorsing the establishment candidate when indifferent. Elites differ only in ideological alignment, so equilibrium endorsement patterns hinge critically on ideological thresholds and reward allocation, determining when elites coordinate behind a single candidate or strategically splinter their endorsements.
+
+To analyze how reward structure shapes equilibrium endorsement patterns, I first focus on the fixed rewards scenario. Recall that elites differ only in their ideological alignment, captured by $x_i$. Let $x_c$ denote the ideological threshold at which an elite is indifferent between endorsing the establishment candidate or the outsider, conditional on the other elite endorsing candidate $c$.
+
+First, coordination behind the establishment candidate emerges if both elites have sufficiently high ideological alignment with that candidate. Specifically, coordination on candidate $E$ occurs whenever:
+
+\[\min\{x_1,x_2\} \geq F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\cdot p_O - \bigg[1- F_V\bigg(-\frac{2\alpha}{1+2\beta}\bigg)\bigg]\cdot p_E \equiv x_E\]
+
+Conversely, both elites endorse the outsider candidate if neither elite sufficiently favors the establishment candidate. This occurs when both elites' ideological preferences fall below a threshold $x_O$
+\[\max\{x_1,x_2\} < F_V(0)\cdot p_O - \bigg[1- F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\bigg]\cdot p_E \equiv x_O\]
+
+When elites' ideological alignments diverge significantly—such that one elite strongly favors the establishment candidate while the other does not—endorsement fragmentation emerges. Formally, this fragmentation equilibrium arises when ideological alignments satisfy:
+
+\[x_i \geq F_V(0)\cdot p_O - \bigg[1- F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\bigg]\cdot p_E\]
+
+\[x_j < F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\cdot p_O - \bigg[1- F_V\bigg(-\frac{2\alpha}{1+2\beta}\bigg)\bigg]\cdot p_E\]
+
+In this fragmented equilibrium, elites strategically diverge due to ideological fractionalization, despite the fixed nature of political advantages. Thus, even when political rewards are constant, ideological heterogeneity among elites can drive endorsement fragmentation, illustrating why endorsement coordination might fail in practice.
+\begin{result} There exists a pure-strategy Nash equilibrium where:
+\begin{enumerate}
+    \item Both elites endorse the establishment candidate, $e_1 = E$ and $e_2 = E$, when
+    \[
+    \min\{x_1,x_2\} \geq F_V\left(-\frac{\alpha}{1+\beta}\right)\cdot p_O - \left[1- F_V\left(-\frac{2\alpha}{1+2\beta}\right)\right]\cdot p_E \equiv x_E,
+    \]
+
+    \item Both elites endorse the outsider candidate, $e_1 = O$ and $e_2 = O$, when
+    \[
+    \max\{x_1,x_2\} < F_V(0)\cdot p_O - \left[1- F_V\left(-\frac{\alpha}{1+\beta}\right)\right]\cdot p_E \equiv x_O;
+    \]
+
+    \item Elites fail to coordinate and endorse different candidates, $e_i = E$ and $e_j = O$, when
+    \[
+    x_i \geq F_V(0)\cdot p_O - \left[1- F_V\left(-\frac{\alpha}{1+\beta}\right)\right]\cdot p_E,
+    \]
+    and
+    \[
+    x_j < F_V\left(-\frac{\alpha}{1+\beta}\right)\cdot p_O - \left[1- F_V\left(-\frac{2\alpha}{1+2\beta}\right)\right]\cdot p_E.
+    \]
+\end{enumerate}
+\end{result}
+
+The equilibrium conditions above highlight how elites' ideological alignments and electoral perceptions shape endorsement coordination. An important implication is that thresholds for coordination may overlap, leading to a region of ideological preferences with multiple equilibria. Formally, the following corollary identifies this scenario:
+
+\begin{corollary}(Multiplicity of Equilibria under Fixed Rewards)
+Under fixed rewards, if thresholds satisfy $x_E < x_O$, there exists an intermediate ideological region where both elites endorsing the establishment candidate $(E, E)$ and both endorsing the outsider $(O, O)$ constitute equilibrium outcomes. This multiplicity region is given by ideological alignments $x_i$ satisfying, for each elite $i \in \{1, 2\}$
+\[x_O > x_i \geq x_E.\]
+In this region, either full coordination outcome may emerge, and equilibrium selection will depend on initial expectations or historical endorsement patterns
+\end{corollary}
+
+Within this region, the outcome depends on initial expectations, historical coordination patterns, or small perturbations in the payoffs. Elites may be tempted to coordinate endorsements for the establishment candidate, especially if prior elections have reinforced this as electorally advantageous. Past success of establishment-backed candidates may frame this as the safer choice. However, elites often consider voter sentiment and allegiance to the party establishment as well. If the electorate is skeptical or resistant to establishment figures, elites may hesitate to follow precedent, even when past patterns suggest they should.
+
+The likelihood of coordination depends heavily on two key factors: how strong the establishment candidate is perceived to be and how uncertain the primary election is. Figure~\ref{fig:Threshold_plot} explicitly demonstrates how endorsement thresholds respond to these factors. As the perceived strength (viability) of the establishment candidate ($v_E$) increases, coordination becomes easier—thresholds decrease, allowing elites to more readily coalesce behind a frontrunner. Conversely, when electoral uncertainty ($\sigma$) is high or establishment viability is low, thresholds shift upward, making elite coordination more difficult and fragmentation more likely. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.9\textwidth]{Images/CoordinationThresholds.png}  % Adjust width as needed
+    \caption{Visualization of Endorsement Thresholds under Fixed Rewards}
+    \label{fig:Threshold_plot}
+\end{figure}
+
+The 2016 Republican primary provides a clear example: Jeb Bush, despite early party backing, failed to establish himself as the dominant choice. Many elites were unsure whether he was truly the strongest candidate. Their hesitation combined with strong anti-establishment voter attitudes made elite coordination more difficult, ultimately empowering outsider candidates.
+
+Electoral uncertainty further exacerbates fragmentation. In Figure~\ref{fig:Threshold_plot}, fragmentation emerges whenever elites' ideological preferences diverge sufficiently—specifically, when one elite's ideological alignment lies below the lower threshold (blue line, $x_E$), while the other's alignment exceeds the upper threshold (red line, $x_O$). As uncertainty increases, the region between these two thresholds closes, indicating greater scope for divergence. Volatile elections imply that voter preferences are harder to predict and polling signals weaken, causing elites to hesitate in their endorsement decisions. Instead of mutually reinforcing endorsements, elites may strategically hedge by supporting competing candidates, thereby prolonging fragmentation and complicating the establishment's ability to coordinate effectively behind a single frontrunner.
+
+Having analyzed elite endorsement behavior under fixed rewards, let's now consider how splitting political rewards among endorsers changes incentives and equilibrium endorsement patterns. Under a split rewards structure, each additional endorsement dilutes the political benefits each elite receives. This dilution changes elites' strategic calculus, raising endorsement thresholds and reducing incentives for coordination. The following result formally characterizes equilibrium endorsement patterns when political benefits must be shared among endorsers, highlighting how this structure increases the ideological alignment required for elites to coordinate behind the same candidate.
+
+\begin{result}
+When political rewards $R=1$ are split evenly among all endorsers, there exists a pure-strategy Nash equilibrium where:
+\begin{enumerate}
+    \item Both elites endorse the establishment candidate, $e_1 = E$ and $e_2 = E$, when 
+    \[\min\{x_1,x_2\} \geq F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\cdot p_O - \frac{1}{2}\bigg[1- F_V\bigg(-\frac{2\alpha}{1+2\beta}\bigg)\bigg]\cdot p_E \equiv x'_E,\]
+
+    \item Both elites endorse the outsider candidate, $e_1 = O$ and $e_2 = O$, when 
+    \[\max\{x_1,x_2\} < \frac{1}{2} F_V(0)\cdot p_O - \left[1- F_V\left(-\frac{\alpha}{1+\beta}\right)\right]\cdot p_E \equiv x'_O,\]
+
+    \item Elites fail to coordinate and endorse different candidates, $e_i = E$ and $e_j = O$, when
+    \[x_i \geq F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\cdot p_O - \frac{1}{2}\bigg[1- F_V\bigg(-\frac{2\alpha}{1+2\beta}\bigg)\bigg]\cdot p_E\] 
+    and 
+    \[x_j < \frac{1}{2} F_V(0)\cdot p_O - \left[1- F_V\left(-\frac{\alpha}{1+\beta}\right)\right]\cdot p_E.\]  
+\end{enumerate}
+\end{result}
+
+The threshold for coordination is higher than in the split rewards case, implying coordination is more fragile. Endorsements are more likely to be differentiated, as elites seek to maximize their influence rather than reinforcing collective support and presenting a united front. Constant rewards strengthen incentives to be on the winning side, fostering support of the frontrunner.
+
+Under the fixed rewards structure, elites have the flexibility to coordinate on either candidate, leading to potentially multiple equilibria. This flexibility disappears when rewards are split among endorsers. When elites share the benefits of endorsing a winning candidate, incentives to coordinate weaken—an additional endorsement diminishes the reward, making fragmentation more attractive than alignment.
+
+Rather than reinforcing each other’s choices, elites now face a direct incentive to differentiate their endorsements to maximize individual influence. This erodes the possibility of multiple equilibria and leads to a unique coordination outcome.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.9\textwidth]{Images/ThresholdSplit.png}  % Adjust width as needed
+    \caption{Visualization of Endorsement Thresholds under Split Rewards}
+    \label{fig:ThresholdSplit_plot}
+\end{figure}
+
+The collapse of multiplicity under split rewards has meaningful implications for real-world elections. When endorsements function as a way for elites to secure influence within the party rather than boost a candidate’s viability, elite support becomes more fragmented. This is particularly salient in primaries with strong factional divisions, where elites hesitate to rally behind a frontrunner. Figure 2 illustrates this shift by highlighting how endorsement thresholds change under split rewards and why coordination is no longer as flexible as in the fixed rewards setting.
+
+
+\subsection*{When Do Endorsements Reinforce Each Other?}
+While coordination determines whether elites align behind the same candidate, it is also important to understand how one endorsement affects the incentives of others. Even when elites ultimately coordinate, the process by which they reach that outcome can vary—endorsements may reinforce each other, leading to rapid consolidation, or they may be competitive, creating hesitation and slower alignment. Distinguishing between these cases provides insight into how elites navigate uncertainty and influence each other’s decisions. Recall that (for fixed rewards) when $e_2 = E$, $e_1 = E$ if and only if 
+
+\[x_1 \geq F_V\left(-\frac{\alpha}{1+\beta}\right) p_O - \left[1- F_V\left(-\frac{2\alpha}{1+2\beta}\right)\right] p_E \equiv x_E\]
+When $e_2 = O$, $e_1 = E$ if and only if 
+\[x_1 \geq F_V(0) p_O - \left[1- F_V\left(-\frac{\alpha}{1+\beta}\right)\right] p_E \equiv x_O\].
+
+Endorsements are strategic complements when $x_E \leq x_O$
+\[\implies  \bigg[1- F_V\bigg(-\frac{\alpha}{1+\beta}\bigg)\bigg] p_E - \bigg[1- F_V\bigg(-\frac{2\alpha}{1+2\beta}\bigg)\bigg] p_E \leq F_V(0) p_O - F_V\bigg(-\frac{\alpha}{1+\beta}\bigg) p_O\]
+
+\[\implies \frac{F_V(-\frac{2\alpha}{1+2\beta}) - F_V(-\frac{\alpha}{1+\beta})}{F_V(0) - F_V(-\frac{\alpha}{1+\beta})} \leq \frac{p_O}{p_E}\]
+
+Given that $F_V\big(-\frac{2\alpha}{1+2\beta}\big) < F_V\big(-\frac{\alpha}{1+\beta}\big)$, this condition is always satisfied. Because political benefits do not depend on the number of endorsers, there is no disincentive to endorse the same candidate. Instead, endorsements reinforce each other, leading to self-reinforcing coordination.
+
+How does the correlation between the number of endorsers and the split of political rewards alter the complementarity of endorsements? Let's again evaluate whether elite 2's endorsement of $E$ makes elite 1 more or less likely to also endorse $E$. That is, when is $x'_E \leq x'_O$?
+
+\[x'_E \leq x'_O \iff \frac{1/2-F_V(-\frac{\alpha}{1+\beta}) + 1/2F_V(-\frac{2\alpha}{1+2\beta})}{1/2F_V(0) - F_V(-\frac{\alpha}{1+\beta})}\leq \frac{p_O}{p_E}\]
+
+The threshold calculation suggests that endorsements may either reinforce or weaken each other, depending on the relative competitiveness of the election. When electoral uncertainty is high, elites may avoid endorsing the same candidate to maximize individual influence. This ambiguity helps explain why some primaries feature rapid coordination, while others remain fragmented. 
+
+To better understand these dynamics, Figure 3 presents the results of a simulation examining the complementarity condition under various parameter values, assuming $v_E > v_O$. The simulation allows us to visualize how changes in key factors—such as the strength of endorsement effects, diminishing returns to endorsements, and electoral uncertainty —shape elite behavior. The results highlight the conditions under which endorsements reinforce each other, driving early consolidation, versus when they act as strategic substitutes, leading to fragmentation.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.9\textwidth]{Images/Complementarity.png}  % Adjust width as needed
+    \caption{Visualization of Strategic Complementarity Condition under Split Rewards}
+    \label{fig:complementarity_plot}
+\end{figure}
+
+When endorsement effects are strong ($\alpha$ is high), elites are more likely to coordinate their endorsements, as seen in the blue regions of the plot. This aligns with real-world cases where early endorsements create momentum, leading to rapid consolidation behind a candidate. However, as diminishing returns to endorsements ($\beta$) increase, coordination incentives weaken, making endorsements more competitive rather than reinforcing. This suggests that when additional endorsements have little marginal impact, elites may hesitate to follow previous endorsements, instead seeking to differentiate their support.
+
+Electoral uncertainty ($\sigma$) also plays a crucial role in shaping complementarity. When elections are highly uncertain, complementarity is less likely to hold, as reflected in the increased presence of red regions in the rightmost facet of the plot. This suggests that in unpredictable elections, elites may delay endorsements or spread their support across multiple candidates, weakening the reinforcement effect. This finding provides a possible explanation for why primaries such as the 2016 Republican race saw fragmented endorsements rather than early consolidation. By contrast, in elections where viability is more predictable, such as the 2020 Democratic primary, endorsements tend to reinforce each other, leading to coordination behind a frontrunner.
+
+These findings reinforce the central claim of the model: endorsements are not inherently self-reinforcing, but rather, their strategic effect depends on the structure of incentives. When the benefits of endorsing a candidate are strong and enduring, elites are likely to coordinate. However, when endorsements have diminishing returns or when electoral viability is uncertain, elites may hesitate to align, leading to fragmented or competitive endorsement patterns. This insight helps explain why some primaries see rapid elite coordination while others remain divided well into the election cycle.
